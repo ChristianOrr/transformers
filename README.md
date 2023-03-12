@@ -12,12 +12,17 @@ The bigram model is the simplest autoregressive language model. It isn't a trans
 ### Scaled Self-Attention
 ![Scaled Self-Attention](./images/scaled_self-attention.png)
 
-This is a transformer decoder model containing a scaled self-attention block. It is the simplest transformer model. This notebook demonstrates how the attention mechanism works by using the most fundamental components, the query, key, and value (Q, K, V). They interact with each other following the process shown in the image above. 
+This is the simplest component of the transformer model which still contains its most imporatant part, the attention mechanism. This notebook demonstrates how the attention mechanism works by using the most fundamental components, the query, key, and value (Q, K, V). They interact with each other following the process shown in the image above. 
 
 ### Multi-Headed Self-Attention
 ![Multi-Head Attention](./images/multi-head-attention.png)
 
 Multi-headed self-attention is a block containing multiple scaled self-attention models in parallel, which are then concatenated and processed through a dense layer, as shown in the image above. Its main advantage over the single-headed self-attention is that it can capture information from different representation subspaces. This enables it to capture more diverse and complex subspaces in the input space.
+
+### Transformer Decoder
+![Attention Transformer Block](./images/attention_transformer_block.png)
+
+The transformer decoder combines all the tools demonstrated in the previous notebooks with other innovations in deep learning, like the skip connections [4], and layer normalization [5], into a single block. This block is repeatable and scalable, making it a vital component of large language models. The decoder block refers to the right block in the image above. We don't need the encoder block for our example problem. 
 
 
 ## Installation Requirements:
@@ -39,3 +44,5 @@ pip install jupyter
 - [1] [GPT colab notebook](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing)
 - [2] [Video: Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/watch?v=kCc8FmEb1nY&ab_channel=AndrejKarpathy)
 - [3] [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [4] [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
+- [5] [Layer Normalization](https://arxiv.org/abs/1607.06450)
