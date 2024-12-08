@@ -32,11 +32,11 @@ GPT-2 [6] is a scaled up version of the transformer decoder. It uses multiple de
 ## Installation Requirements:
 If you have a GPU you can install Jax by running the following first:
 ```
-pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+pip install -U "jax[cuda12]"
 ```
 All the other requirements are provided below:
 ```
-pip install --upgrade git+https://github.com/google/flax.git
+pip install flax
 pip install optax
 pip install numpy
 pip install jupyter
